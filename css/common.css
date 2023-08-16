@@ -192,8 +192,8 @@ header .menu a.active {
     background-color: #0064A2;
     color: #fff;
 }
-
-.portfolio_contents {
+  
+.portfolio_contents, .popup-gallery {
     width: calc(100% - 480px);
     margin: 0 auto;
     display: grid;
@@ -202,20 +202,14 @@ header .menu a.active {
     margin-bottom: 200px;
 }
 
-.portfolio_contents .contents img {
+.portfolio_contents .contents img, .popup-gallery .contents img {
     width: 100%;
     object-fit: cover;
     filter: drop-shadow(3px 3px 3px rgb(0,0,0,0.25));
-    overflow: hidden;
     transition: all 0.2s linear;
 }
 
-.portfolio_contents .contents:hover img {
-    transform: scale(1.2);
-    overflow: hidden;
-}
-
-.portfolio_contents .contents p {
+.portfolio_contents .contents p, .popup-gallery p {
     font-size: 18px;
     text-align: center;
     margin: 30px 0 50px;
@@ -361,5 +355,90 @@ header .menu a.active {
     display: flex;
     align-items: center; justify-content: center;
     border-radius: 10px;
+    filter: drop-shadow(2px 3px 1px rgb(0,0,0,0.25));
+}
+
+
+
+
+
+.sub_tit {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+
+.post-slider{
+    /* border:1px solid red; */
+    position: relative;
+    width:calc(100% - 300px);
+    margin: 0px auto;
+  }
+
+.post-slider .post-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+
+.post-slider .post-wrapper .post{
+  width: 100%; height: 750px;
+  display: inline-block;
+  /* background:gray; */
+  /* border: 1px solid #000; */
+}
+
+.post-slider .post-wrapper .post img {
+  object-fit: cover;
+  filter: drop-shadow(0 0 7px rgb(0,0,0,0.25));
+  scale: 0.6;
+  margin: -50px 0 0 30px;
+  transition: all 0.5s;
+}
+
+.slick-center {
+    scale: 1.15;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translate(0, -50%);
+    width: 100%;
+    /* background-color: #0064A2; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrow i {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.xi-angle-left {
+    margin-left: -50px;
+}
+
+.xi-angle-right {
+    margin-right: -50px;
+}
+
+
+.paging {
+    font-size: 14px;
+    text-align: center;
+    margin-top: -80px;
+    color: #666;
+}
+
+.UI_link {
+    width: 120px; height: 40px;
+    background-color: #0064A2;
+    color: #fff;
+    display: flex;
+    align-items: center; justify-content: center;
+    border-radius: 10px;
+    margin: 50px auto 100px;
+    font-weight: bold; font-size: 16px;
     filter: drop-shadow(2px 3px 1px rgb(0,0,0,0.25));
 }
