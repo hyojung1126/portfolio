@@ -12,7 +12,7 @@
 
 /* header */
 header {
-    width: 100%; height: 80px;
+    width: 100%; height: 60px;
     position: absolute;
     top: 0; left: 0;
     display: flex;
@@ -37,7 +37,7 @@ header .menu {
 header .menu a {
     display: block;
     height: 100%;
-    line-height: 80px;
+    line-height: 60px;
     position: relative;
     z-index: 10;
 }
@@ -52,7 +52,7 @@ header .menu a.active {
     height: 1px;
     background-color: #A9D0EF;
     position: absolute;
-    top: 79px; left: 0;
+    top: 59px; left: 0;
     z-index: 1;
 }
 
@@ -88,7 +88,7 @@ header .menu a.active {
 .page_tit {
     font-size: 22px;
     font-weight: bold;
-    margin: 135px 0 50px;
+    margin: 115px 0 50px;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -199,11 +199,20 @@ header .menu a.active {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
+    margin-bottom: 200px;
 }
 
 .portfolio_contents .contents img {
     width: 100%;
     object-fit: cover;
+    filter: drop-shadow(3px 3px 3px rgb(0,0,0,0.25));
+    overflow: hidden;
+    transition: all 0.2s linear;
+}
+
+.portfolio_contents .contents:hover img {
+    transform: scale(1.2);
+    overflow: hidden;
 }
 
 .portfolio_contents .contents p {
@@ -269,14 +278,27 @@ header .menu a.active {
     background-color: #EEF8FF;
     width: 100%;
     display: flex;
+    margin-bottom: 100px;
 }
 
 .web_detail > div {
     flex: 1;
 }
 
+.web_img {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.web_img img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .txt_group {
-    width: 450px;
+    width: 100%;
+    padding: 0 50px;
     margin-left: 100px;
 }
 
@@ -341,4 +363,3 @@ header .menu a.active {
     border-radius: 10px;
     filter: drop-shadow(2px 3px 1px rgb(0,0,0,0.25));
 }
-
