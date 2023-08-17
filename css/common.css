@@ -226,7 +226,7 @@ header .menu a.active {
     text-align: center;
     margin-bottom: 50px;
     line-height: 1.7;
-    font-weight: normal;
+    color: #222;
     font-weight: 800;
 }
 
