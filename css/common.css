@@ -193,7 +193,7 @@ header .menu a.active {
     color: #fff;
 }
   
-.portfolio_contents, .popup-gallery {
+.portfolio_contents, .lightbox_gallery {
     width: calc(100% - 480px);
     margin: 0 auto;
     display: grid;
@@ -202,14 +202,14 @@ header .menu a.active {
     margin-bottom: 200px;
 }
 
-.portfolio_contents .contents img, .popup-gallery .contents img {
+.portfolio_contents .contents img, .lightbox_gallery img {
     width: 100%;
     object-fit: cover;
     filter: drop-shadow(3px 3px 3px rgb(0,0,0,0.25));
     transition: all 0.2s linear;
 }
 
-.portfolio_contents .contents p, .popup-gallery p {
+.portfolio_contents .contents p, .lightbox_gallery p  {
     font-size: 18px;
     text-align: center;
     margin: 30px 0 50px;
