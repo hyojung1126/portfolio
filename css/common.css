@@ -7,7 +7,7 @@
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    object-fit: cover top; 
+    object-fit: cover; 
 }
 
 /* header */
@@ -58,9 +58,11 @@ header .menu a.active {
 
 /* main_title */
 .main_title {
-    position: relative;
+    width: 100%;
+    position: absolute;
     font-weight: 800;
-    margin-top: 85px;
+    top: 50%; 
+    transform: translate(0,-50%);
     padding: 100px 120px 0 120px;
     z-index: 2;
     color: #fff;
@@ -68,7 +70,6 @@ header .menu a.active {
 
 .main_title p {
     font-size: 40px;
-    font-weight: 800;
     filter: drop-shadow(3px 4px 3px rgb(0,0,0,0.25));
 }
 
@@ -78,7 +79,6 @@ header .menu a.active {
 
 .main_title h1 {
     font-size: 100px;
-    font-weight: 800;
     filter: drop-shadow(5px 4px #0064A2);
     margin: 10px 0;
 }
@@ -373,42 +373,45 @@ header .menu a.active {
 
 
 .post-slider{
-    /* border:1px solid red; */
     position: relative;
-    width:calc(100% - 300px);
-    margin: 0px auto;
-  }
-
-.post-slider .post-wrapper{
-    width: 100%;
-    overflow: hidden;
+    width: 1000px;
+    margin: 50px auto;
 }
 
-.post-slider .post-wrapper .post{
-  width: 100%; height: 750px;
-  display: inline-block;
-  /* background:gray; */
-  /* border: 1px solid #000; */
+
+.post-slider .post-wrapper {
+    padding: 20px 0;
+}
+
+.post-slider .post-wrapper .post {
+    margin: 30px;
+    border: 1px solid #999;
 }
 
 .post-slider .post-wrapper .post img {
-  object-fit: cover;
-  filter: drop-shadow(0 0 7px rgb(0,0,0,0.25));
-  scale: 0.6;
-  margin: -50px 0 0 30px;
-  transition: all 0.5s;
+    display: block;
+    width: 100%;
 }
 
-.slick-center {
-    scale: 1.15;
+.post-slider .post-wrapper .post.slick-center {
+    position: relative;
+}
+
+.post-slider .post-wrapper .post.slick-center img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.1);
+    border: 1px solid #999;
 }
 
 .arrow {
     position: absolute;
-    top: 50%; left: 0;
-    transform: translate(0, -50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 100%;
-    /* background-color: #0064A2; */
     display: flex;
     justify-content: space-between;
 }
@@ -430,7 +433,6 @@ header .menu a.active {
 .paging {
     font-size: 14px;
     text-align: center;
-    margin-top: -80px;
     color: #666;
 }
 
